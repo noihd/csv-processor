@@ -5,8 +5,12 @@ APP='POLICE DATA PORTAL'
 SOURCE_DIR='./src'
 PROCESSED_DIR='./processed'
 
+# Zip File Names
+ZIP="$SOURCE_DIR/police_data_portal.csv.zip"
+
 # CSV File Names
 CSV="$SOURCE_DIR/police_data_portal.csv"
+CSV_HEADERS="$PROCESSED_DIR/police_data_portal_headers.txt"
 CSV_PREVIEW="$PROCESSED_DIR/police_data_portal_truncated.csv"
 
 # Split CSV File Names
@@ -41,10 +45,35 @@ trap shutdown SIGINT SIGTERM
 
 echo -e "\n\033[48;5;22m $APP \033[0m\n"
 
+# ============================================================
+# STEP 1: UNZIP DATA SET IF IT WAS NOT ALREADY UNZIPPED
+# ============================================================
+
+# Check if we downloaded the zip file and did not unzip it
+if [ -f "$ZIP" ] && [ ! -f "$CSV" ]; then
+  echo "› Unzipping $ZIP File... ( this may take a minute )"
+  unzip -qq -o $ZIP -d $SOURCE_DIR
+
+  if [ -f "$CSV" ]; then
+    echo "› Cleaning Up $ZIP Extraction..."
+    rm -fr $SOURCE_DIR/__MACOSX
+    rm $ZIP
+  fi
+fi
+
+# ============================================================
+# STEP 2: BREAK UP MASSIVE CSV INTO SMALLER CSV GROUP FILES
+# ============================================================
+
+# Make sure we have a CSV file
 if [ -f "$CSV" ]; then
   # Remove Previously Exported Files
   echo '› Cleaning Previous Exports...'
   rm $PROCESSED_DIR/*
+
+  # Export CSV Column Headers to their Own File
+  echo "› Exporting CSV Headers to $CSV_HEADERS..."
+  head -n 1 $CSV | tr ',' '\n' | tr -d '"' > $CSV_HEADERS
 
   # Make Sample File for Review
   echo "› Exporting 1,000 row preview to $CSV_PREVIEW..."
@@ -83,6 +112,13 @@ if [ -f "$CSV" ]; then
   cut -d, -f$SIE $CSV > $CSV_SIE
 else
   echo -e "\n\033[38;5;196m× $CSV does not exist\033[0m\n"
+  exit 1
 fi
+
+# ============================================================
+# STEP 3: CONVERT EACH GROUP CSV FILE INTO SQL IMPORT
+# ============================================================
+
+# TODO: Create CSV to Model Converts for Each Group Type
 
 echo -e "\n\033[38;5;34m✓ CSV Processing Complete\033[0m\n"
