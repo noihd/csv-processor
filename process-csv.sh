@@ -24,14 +24,14 @@ CSV_FE="$PROCESSED_DIR/group-fe.csv"   # Fatal Encounters Data
 CSV_SIE="$PROCESSED_DIR/group-sie.csv" # Siegel Firearm Data
 
 # Column Mappings ( splits CSV columns by column position )
-XWK='1-52'
-LEM='54-120,772-780'
-UCR='121-145'
-CEN='148-305'
-VIC='306-314'
-LEO='315-321,232-328'
-FE='329-345,347-370,378-405,413-681,683-692,700-734,742-762,781-794'
-SIE='763-771'
+XWK='1,4-54'
+LEM='2,55-121,742-750'
+UCR='3,122-146'
+CEN='149-306'
+VIC='307-315'
+LEO='316-328'
+FE='329-732,751-764'
+SIE='733-741'
 
 # Functions
 function shutdown() {
