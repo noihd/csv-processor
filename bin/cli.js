@@ -19,9 +19,17 @@ const argv = yargs
       default: false
     }
   })
+  .command('parse', 'Parse CSV File', {
+    headersOnly: {
+      describe: 'Extract Headers to File',
+      type: 'boolean',
+      default: false
+    }
+  })
   .example('pdp fetch', 'Fetch Latest Codebook & CSV')
   .example('pdp fetch --codebook', 'Fetch Latest Codebook')
   .example('pdp fetch --csv', 'Fetch Latest CSV')
+  .example('pdp parse --headers-only', 'Extract Headers to File')
   .demand(1)
   .help()
   .version().argv

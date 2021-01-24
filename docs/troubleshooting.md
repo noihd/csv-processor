@@ -9,4 +9,4 @@ Troubleshooting
 
 <img src="https://octodex.github.com/images/dinotocat.png" width="400" />
 
-#### :tada: NOTHING YET :tada:
+#### NOTHING YET :tada:

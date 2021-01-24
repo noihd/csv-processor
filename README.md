@@ -9,12 +9,13 @@ Developer Overview
 ---
 #### Commands
 
-* [`sfcc fetch`](docs/cmd-fetch.md) - Setup SFCC Development
-* [`sfcc help`](docs/cmd-help.md) - Get Help when you need it
+- [X] [`pdp fetch`](docs/cmd-fetch.md) - Fetch Latest Data
+- [X] [`pdp parse`](docs/cmd-parse.md) - CSV Parsing Utilities
+- [X] [`pdp help`](docs/cmd-help.md) - Get Help when you need it
 
 #### Additional Information
 
-* [Troubleshooting](docs/troubleshooting.md)
+- [X] [Troubleshooting](docs/troubleshooting.md)
 
 Install
 ---
@@ -33,8 +34,7 @@ pdp fetch
 #### Install via Clone
 
 ```bash
-cd ~
-git clone https://github.com/FatalEncounters/pdp-csv-processor.git
+git clone git@github.com:FatalEncounters/pdp-csv-processor.git
 cd pdp-csv-processor
 npm install -g
 pdp fetch
