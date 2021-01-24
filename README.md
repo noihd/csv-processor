@@ -1,20 +1,41 @@
-Police Data Portal - CSV Processor
-===
+![Logo](docs/img/logo.png "Logo")
 
-> A shell script to process our massive data file into API ready imports.
-
-Setup Instructions
+CSV Processor
 ---
 
-Before you can begin, you will need to download the `codebook.pdf` and `police_data_portal.zip` from [Google Drive](https://drive.google.com/drive/folders/1cPYyhkU3b8l4eG0CMLDVHpkMUW0fZKD3) and place in the `./src` folder.  These files should not be included in this repository.
+> A CLI Tool to process our massive data file into API ready imports.
 
-[![Download](https://img.shields.io/badge/Download-blue.svg?logo=google-drive&style=for-the-badge&logoColor=white)](https://drive.google.com/drive/folders/1cPYyhkU3b8l4eG0CMLDVHpkMUW0fZKD3)
+Developer Overview
+---
+#### Commands
 
-Running CSV Processor
+* [`sfcc fetch`](docs/cmd-fetch.md) - Setup SFCC Development
+* [`sfcc help`](docs/cmd-help.md) - Get Help when you need it
+
+#### Additional Information
+
+* [Troubleshooting](docs/troubleshooting.md)
+
+Install
 ---
 
-> In a terminal window, change directories to this project folder, and run the following command.  NOTE: This process takes several minutes to complete. You will see a `✓ CSV Processing Complete` message when everything's complete.
+#### Requirements
+
+- [X] [Node v11+](https://nodejs.org/en/download/)
+
+#### Install via NPM
 
 ```bash
-./process-csv.sh
+npm install -g pdp-csv-processor
+pdp fetch
+```
+
+#### Install via Clone
+
+```bash
+cd ~
+git clone https://github.com/FatalEncounters/pdp-csv-processor.git
+cd pdp-csv-processor
+npm install -g
+pdp fetch
 ```

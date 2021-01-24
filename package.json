@@ -1,0 +1,65 @@
+{
+  "name": "pdp-csv-processor",
+  "version": "1.0.0",
+  "description": "Police Data Portal CSV Processor",
+  "homepage": "https://github.com/FatalEncounters/pdp-csv-processor#readme",
+  "license": "MIT",
+  "main": "./bin/cli.js",
+  "bin": {
+    "pdp": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=11.6.0"
+  },
+  "keywords": [
+    "cli",
+    "police-data",
+    "csv",
+    "processor"
+  ],
+  "contributors": [
+    {
+      "name": "Peter Schmalfeldt",
+      "email": "me@peterschmalfeldt.com",
+      "url": "https://peterschmalfeldt.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FatalEncounters/pdp-csv-processor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FatalEncounters/pdp-csv-processor/issues"
+  },
+  "scripts": {
+    "test": "eslint --ext .js ./ --fix && echo '\n【ツ】CODE PERFECTION !!!\n'"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint . --fix",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "minimist": "^1.2.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "debug": "^4.1.1",
+    "del": "^6.0.0",
+    "lodash": "^4.17.20",
+    "nodejs-file-downloader": "^4.1.1",
+    "onezip": "^5.0.0",
+    "ora": "^5.3.0",
+    "progress-extract": "^1.0.2",
+    "yargs": "^13.2.4"
+  }
+}
