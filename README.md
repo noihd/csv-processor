@@ -11,6 +11,7 @@ Developer Overview
 
 - [X] [`pdp fetch`](docs/cmd-fetch.md) - Fetch Latest Data
 - [X] [`pdp parse`](docs/cmd-parse.md) - CSV Parsing Utilities
+- [X] [`pdp util`](docs/cmd-util.md) - Developer Utilities
 - [X] [`pdp help`](docs/cmd-help.md) - Get Help when you need it
 
 #### Additional Information

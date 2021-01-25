@@ -25,7 +25,7 @@ module.exports = {
         'singleQuote': true,
         'bracketSpacing': false,
         'semi': false,
-        'printWidth': 120
+        'printWidth': 500
       }
     ],
     'no-empty': [

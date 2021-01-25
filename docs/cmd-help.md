@@ -18,4 +18,5 @@ You can get help on a specific command by just adding `help` to the end of the c
 ```bash
 pdp fetch help
 pdp parse help
+pdp util help
 ```

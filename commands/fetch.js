@@ -13,10 +13,12 @@ module.exports = async options => {
   const getCodebook = (!options.codebook && !options.csv) || options.codebook
   const getCsv = (!options.codebook && !options.csv) || options.csv
 
+  // Check if `--codebook` flag was used
   if (getCodebook) {
     await download(urlCodebook, srcPath, 'Codebook')
   }
 
+  // Check if `--csv` flag was used
   if (getCsv) {
     await download(urlCsv, srcPath, 'CSV')
     await extract(zipPath, srcPath)

@@ -26,10 +26,25 @@ const argv = yargs
       default: false
     }
   })
+  .command('util', 'Developer Utilities', {
+    model: {
+      alias: 'm',
+      describe: 'Get Mapping for Provided Model',
+      type: 'string',
+      choices: ['agency']
+    },
+    format: {
+      alias: 'f',
+      describe: 'Format to Render to Console',
+      type: 'string',
+      choices: ['json', 'table']
+    }
+  })
   .example('pdp fetch', 'Fetch Latest Codebook & CSV')
   .example('pdp fetch --codebook', 'Fetch Latest Codebook')
   .example('pdp fetch --csv', 'Fetch Latest CSV')
   .example('pdp parse --headers-only', 'Extract Headers to File')
+  .example('pdp util --model agency --format table', 'Get CSV Mapping for Model')
   .demand(1)
   .help()
   .version().argv
