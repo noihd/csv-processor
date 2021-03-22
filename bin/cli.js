@@ -31,7 +31,16 @@ const argv = yargs
       alias: 'm',
       describe: 'Get Mapping for Provided Model',
       type: 'string',
-      choices: ['agency']
+      choices: [
+        'Agency',
+        'AnnualDeaths',
+        'AnnualOfficerDeaths',
+        'Characteristics',
+        'Crimes',
+        'Demographics',
+        'FirearmLaws',
+        'Gunshots'
+      ]
     },
     format: {
       alias: 'f',
