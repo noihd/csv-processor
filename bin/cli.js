@@ -24,6 +24,18 @@ const argv = yargs
       describe: 'Extract Headers to File',
       type: 'boolean',
       default: false
+    },
+    limit: {
+      alias: 'l',
+      describe: 'Limit Number of Records to Parse',
+      type: 'number',
+      default: 0
+    },
+    model: {
+      alias: 'm',
+      describe: 'Use Mapping for Provided Model',
+      type: 'string',
+      choices: ['Agency', 'AnnualDeaths', 'AnnualOfficerDeaths', 'Characteristics', 'Crimes', 'Demographics', 'FirearmLaws', 'Gunshots']
     }
   })
   .command('util', 'Developer Utilities', {
@@ -31,16 +43,7 @@ const argv = yargs
       alias: 'm',
       describe: 'Get Mapping for Provided Model',
       type: 'string',
-      choices: [
-        'Agency',
-        'AnnualDeaths',
-        'AnnualOfficerDeaths',
-        'Characteristics',
-        'Crimes',
-        'Demographics',
-        'FirearmLaws',
-        'Gunshots'
-      ]
+      choices: ['Agency', 'AnnualDeaths', 'AnnualOfficerDeaths', 'Characteristics', 'Crimes', 'Demographics', 'FirearmLaws', 'Gunshots']
     },
     format: {
       alias: 'f',
