@@ -50,13 +50,20 @@ const argv = yargs
       describe: 'Format to Render to Console',
       type: 'string',
       choices: ['json', 'table']
+    },
+    sql: {
+      alias: 's',
+      describe: 'Generate SQL Import',
+      type: 'boolean',
     }
   })
   .example('pdp fetch', 'Fetch Latest Codebook & CSV')
   .example('pdp fetch --codebook', 'Fetch Latest Codebook')
   .example('pdp fetch --csv', 'Fetch Latest CSV')
   .example('pdp parse --headers-only', 'Extract Headers to File')
-  .example('pdp util --model agency --format table', 'Get CSV Mapping for Model')
+  .example('pdp parse --model Agency', 'Parse CSV for Specific Model')
+  .example('pdp util --model Agency --format table', 'Get CSV Mapping for Model')
+  .example('pdp util --sql > schema.sql', 'Convert CSV to Raw SQL Schema')
   .demand(1)
   .help()
   .version().argv
