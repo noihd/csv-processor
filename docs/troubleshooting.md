@@ -5,20 +5,21 @@
 Troubleshooting
 ===
 
-> This document contains a list of known issues, and how to solve them.
+Known Issues
+---
 
-<img src="https://octodex.github.com/images/dinotocat.png" width="400" />
+> The following is a list of known issues, and how to solve them.
+
+<center><img src="https://octodex.github.com/images/dinotocat.png" width="400" /></center>
 
 #### NOTHING YET :tada:
 
 Working with Raw Data
 ---
 
-Sometimes it is easer to just import the CSV into a Database so you can work with different queries and analyze the types of data you are working with.  Here are some helpful tips for doing that kind of work.
+> Sometimes it is easer to just import the CSV into a Database so you can work with different queries and analyze the types of data you are working with.  Here are some helpful tips for doing that kind of work.
 
 ### Generate Tables
-
-> **NOTE:** Make sure you update the file paths in the sample code above, e.g. change `/path/to/` to your actual path.
 
 First, you'll need to create the Schema File to import:
 
@@ -50,3 +51,5 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES;
 ```
+
+**NOTE:** Make sure you update the file paths in the sample code above, e.g. change `/path/to/` to your actual path.
