@@ -2,3 +2,5 @@
 src/*
 processed/*
 node_modules/
+.env
+mysql-import.log

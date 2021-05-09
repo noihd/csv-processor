@@ -54,7 +54,7 @@ const argv = yargs
     sql: {
       alias: 's',
       describe: 'Generate SQL Import',
-      type: 'boolean',
+      type: 'boolean'
     }
   })
   .example('pdp fetch', 'Fetch Latest Codebook & CSV')

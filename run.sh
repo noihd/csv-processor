@@ -34,7 +34,7 @@ gzip ./sql/demographics.sql
 
 # Generate FirearmLaws SQL and Compress
 ./bin/cli.js parse -m FirearmLaws
-gzip ./sql/firearm_law.sql
+gzip ./sql/firearm_laws.sql
 
 # Generate Gunshots SQL and Compress
 ./bin/cli.js parse -m Gunshots

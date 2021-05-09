@@ -32,7 +32,7 @@
     "url": "https://github.com/FatalEncounters/pdp-csv-processor/issues"
   },
   "scripts": {
-    "test": "eslint --ext .js ./ && echo '\n【ツ】CODE PERFECTION !!!\n'"
+    "test": "eslint --ext .js ./ --fix && echo '\n【ツ】CODE PERFECTION !!!\n'"
   },
   "lint-staged": {
     "*.js": [
