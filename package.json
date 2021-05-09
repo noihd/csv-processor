@@ -57,7 +57,7 @@
     "csv-parser": "^3.0.0",
     "debug": "^4.1.1",
     "del": "^6.0.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "mysql-generator": "^1.0.9",
     "nodejs-file-downloader": "^4.1.1",
     "onezip": "^5.0.0",
