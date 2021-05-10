@@ -16,7 +16,7 @@ __notice(){
 
 __output(){
     TEXT=$( echo $1 | tr '\n' ' ')
-    echo -e "\033[7m ›\033[27m $TEXT"
+    echo -e "› $TEXT"
 }
 
 __success(){
@@ -53,6 +53,8 @@ if [ -f ./sql/agency.sql.gz ]; then
     gzip ./sql/agency.sql
 
     __success "Agency Import Complete"
+  else
+    __output "Skipped Agency"
   fi
 else
   __notice "Skipping Agency ( missing ./sql/agency.sql.gz )"
@@ -71,6 +73,8 @@ if [ -f ./sql/annual_deaths.sql.gz ]; then
     gzip ./sql/annual_deaths.sql
 
     __success "AnnualDeaths Import Complete"
+  else
+    __output "Skipped AnnualDeaths"
   fi
 else
   __notice "Skipping AnnualDeaths ( missing ./sql/annual_deaths.sql.gz )"
@@ -89,6 +93,8 @@ if [ -f ./sql/annual_officer_deaths.sql.gz ]; then
     gzip ./sql/annual_officer_deaths.sql
 
     __success "AnnualOfficerDeaths Import Complete"
+  else
+    __output "Skipped AnnualOfficerDeaths"
   fi
 else
   __notice "Skipping AnnualOfficerDeaths ( missing ./sql/annual_officer_deaths.sql.gz )"
@@ -107,6 +113,8 @@ if [ -f ./sql/characteristics.sql.gz ]; then
     gzip ./sql/characteristics.sql
 
     __success "Characteristics Import Complete"
+  else
+    __output "Skipped Characteristics"
   fi
 else
   __notice "Skipping Characteristics ( missing ./sql/characteristics.sql.gz )"
@@ -125,6 +133,8 @@ if [ -f ./sql/crimes.sql.gz ]; then
     gzip ./sql/crimes.sql
 
     __success "Crimes Import Complete"
+  else
+    __output "Skipped Crimes"
   fi
 else
   __notice "Skipping Crimes ( missing ./sql/crimes.sql.gz )"
@@ -143,6 +153,8 @@ if [ -f ./sql/demographics.sql.gz ]; then
     gzip ./sql/demographics.sql
 
     __success "Demographics Import Complete"
+  else
+    __output "Skipped Demographics"
   fi
 else
   __notice "Skipping Demographics ( missing ./sql/demographics.sql.gz )"
@@ -161,6 +173,8 @@ if [ -f ./sql/firearm_laws.sql.gz ]; then
     gzip ./sql/firearm_laws.sql
 
     __success "FirearmLaws Import Complete"
+  else
+    __output "Skipped FirearmLaws"
   fi
 else
   __notice "Skipping FirearmLaws ( missing ./sql/firearm_laws.sql.gz )"
@@ -179,6 +193,8 @@ if [ -f ./sql/gunshots.sql.gz ]; then
     gzip ./sql/gunshots.sql
 
     __success "Gunshots Import Complete"
+  else
+    __output "Skipped Gunshots"
   fi
 else
   __notice "Skipping Gunshots ( missing ./sql/gunshots.sql.gz )"

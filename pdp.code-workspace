@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+    "window.title": "PDP CSV Processor${separator}${activeEditorShort}",
+		"cSpell.words": [
+			"codebook",
+			"csllea",
+			"leaic",
+			"lemas",
+			"ncic"
+		],
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/*.git": true,
+			"node_modules": true,
+			"pdp.code-workspace": false,
+			".gitattributes": true,
+			".github": true
+		},
+		"explorerExclude.backup": null
+	}
+}
